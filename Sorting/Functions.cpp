@@ -105,8 +105,6 @@ void MergeSort(int* arr, int begin, int end) {
 }
 /*End of Merge sort*/
 
-void TimSort(int*, const int);
-
 void SelectionSort(int* arr, const int size) {
 	int tmp = 0;		// for swapping
 	int current = 0;
@@ -144,16 +142,18 @@ void CombSort(int* arr, const int size) {
 	}
 }
 
-void ShellSort(int* arr, const int size) {
-
+int BinarySearch(int* arr, int value, int begin, int end) {
+	if (begin >= end) {
+		return -1;
+	}
+	int middle = (begin + end) / 2;
+	if (value > arr[middle]) {
+		BinarySearch(arr, value, middle + 1, end);
+	}
+	else if (value < arr[middle]) {
+		BinarySearch(arr, value, begin, middle - 1);
+	}
+	else {
+		return middle;
+	}
 }
-
-int gap(const int) {
-	return 0;
-}
-
-/*Quick sort*/
-void QuickSort(int* arr, int begin, int end) {		//Hoare partition scheme
-	
-}
-/*End of Quick sort*/

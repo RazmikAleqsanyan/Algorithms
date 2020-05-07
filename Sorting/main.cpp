@@ -19,6 +19,8 @@ int main() {
 		std::cout << arr[i] << " ";
 	}
 	std::cout << std::endl;
+	int k = BinarySearch(arr, 10, 0, n);
+	std::cout << k;
 	system("pause");
 	return 0;
 }

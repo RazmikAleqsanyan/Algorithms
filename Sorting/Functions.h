@@ -8,8 +8,7 @@ void GnomeSort(int*, const int);
 void Merge(int*, int, int, int);
 void MergeSort(int*, int, int);
 /*End of Merge sort*/
-void TimSort(int*, const int);
 void SelectionSort(int*, const int);
 void CombSort(int*, const int);
-void ShellSort(int*, const int);
-void QuickSort(int*, int, int);
+
+int BinarySearch(int*, int, int, int);
